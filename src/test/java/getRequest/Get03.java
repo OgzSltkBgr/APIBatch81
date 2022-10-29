@@ -29,13 +29,13 @@ And
     @Test
     public void get01(){
         // Set The URL
-        spec.pathParams("first","todos","second",23);
+        spec.pathParams("ali","todos","veli",23);
 
         // Expected Date
 
         // Send the request and Get Response
 
-        Response response = given().spec(spec).when().get("/{first}/{second}");
+        Response response = given().spec(spec).when().get("/{ali}/{veli}");
         response.prettyPrint();
 
         // Do Assertion
@@ -46,7 +46,8 @@ And
                 contentType("application/json").
                 body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit")).
                 body("completed",equalTo(false)).
-                body("userId",equalTo(2));
+                body("userId",equalTo(2))
+                        .body("id",equalTo(23));
 
         // 2. Yol (Soft Assert)
 

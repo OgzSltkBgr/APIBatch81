@@ -56,23 +56,23 @@ public class Get01 {
 
         response.then().assertThat().statusCode(200).contentType("application/json").statusLine("HTTP/1.1 200 OK");
 
-        // Status Code konsola yazdiralim
-        System.out.println("Status Code : "+response.getStatusCode());
+      // Status Code konsola yazdiralim
+      System.out.println("Status Code : "+response.getStatusCode());
 
-        // Content Type konsola yazdiralim
-        System.out.println("Content Type : "+ response.getContentType());
+   //   // Content Type konsola yazdiralim
+      System.out.println("Content Type : "+ response.getContentType());
 
-        // Status Line konsola yazdirlaim
-        System.out.println("Status Line : "+response.getStatusLine());
+   //   // Status Line konsola yazdirlaim
+      System.out.println("Status Line : "+response.getStatusLine());
 
-        // Header konsola yazdiralim
-        System.out.println("Header: "+ response.getHeader("Server"));
+   //   // Header konsola yazdiralim
+      System.out.println("Header: "+ response.getHeader("Server"));
 
-        // Headers konsola yazdiralim
-        System.out.println("Headers : "+response.getHeaders());
+   //   // Headers konsola yazdiralim
+      System.out.println("Headers : "+response.getHeaders());
 
-        // Time konsola yazdiralim
-        System.out.println("Time : "+response.getTime());
+   //   // Time konsola yazdiralim
+      System.out.println("Time : "+response.getTime());
 
 
     }

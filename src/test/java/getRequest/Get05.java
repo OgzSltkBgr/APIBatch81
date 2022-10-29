@@ -24,7 +24,7 @@ And
     @Test
     public void get01() {
         //1 . Set the url
-        spec.pathParam("first","booking").queryParams("firstname","Ali","lastname","Cengiz");
+        spec.pathParam("first","booking").queryParams("firstname","Blanka","lastname","Preis");
 
        //2. Set the expected data
 

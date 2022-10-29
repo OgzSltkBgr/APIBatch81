@@ -34,7 +34,7 @@ Then
     @Test
     public void get01() {
         //1 Set the url
-        spec.pathParams("first","todos");
+        spec.pathParam("first","todos");
 
         // 2. Set The Expected Data
 

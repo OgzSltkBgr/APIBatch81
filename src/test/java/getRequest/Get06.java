@@ -59,7 +59,7 @@ public class Get06 extends RestfulBaseUrl {
          {
     "firstname": "Bradley",
     "lastname": "Pearson",
-    "totalprice": 132,
+    "totalprice":132,
     "depositpaid": false,
     "bookingdates": { // outer json
         "checkin": "2022-10-27", // inner json
@@ -68,28 +68,28 @@ public class Get06 extends RestfulBaseUrl {
     "additionalneeds": "None"
          */
         // 4. Do assertion
-        response
-                .then()
-                .assertThat()
-                .statusCode(200)
-                .contentType(ContentType.JSON)
-                .body("firstname",equalTo("Bradley"),
-                        "lastname",equalTo("Pearson"),
-                        "totalprice",equalTo(132),
-                        "depositpaid",equalTo(false),
-                        "bookingdates.checkin",equalTo("2022-10-27"),
-                        "bookingdates.checkout",equalTo("2022-11-07"),
-                        "additionalneeds",equalTo("None"));
+   //    response
+   //            .then()
+   //            .assertThat()
+   //            .statusCode(200)
+   //            .contentType(ContentType.JSON)
+   //            .body("firstname",equalTo("Bradley"),
+   //                    "lastname",equalTo("Pearson"),
+   //                    "totalprice",equalTo(132),
+   //                    "depositpaid",equalTo(false),
+   //                    "bookingdates.checkin",equalTo("2022-10-27"),
+   //                    "bookingdates.checkout",equalTo("2022-11-07"),
+   //                    "additionalneeds",equalTo("None"));
 
         // 2. Yol
-        JsonPath json= response.jsonPath();
-        assertEquals("Bradley",json.getString("firstname"));
-        assertEquals("Pearson",json.getString("lastname"));
-        assertEquals(132,json.getInt("totalprice"));
-        assertFalse(json.getBoolean("depositpaid"));
-        assertEquals("2022-10-27",json.getString("bookingdates.checkin"));
-        assertEquals("2022-11-07",json.getString("bookingdates.checkout"));
-        assertEquals("None",json.getString("additionalneeds"));
+       JsonPath json= response.jsonPath();
+   //    assertEquals("Bradley",json.getString("firstname"));
+   //    assertEquals("Pearson",json.getString("lastname"));
+   //    assertEquals(132,json.getInt("totalprice"));
+   //    assertFalse(json.getBoolean("depositpaid"));
+   //    assertEquals("2022-10-27",json.getString("bookingdates.checkin"));
+   //    assertEquals("2022-11-07",json.getString("bookingdates.checkout"));
+   //    assertEquals("None",json.getString("additionalneeds"));
 
         // 3. Yol: Soft Assertion
         // sofAssert class  3 adimda kullanilir
