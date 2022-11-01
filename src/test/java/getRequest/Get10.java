@@ -54,6 +54,7 @@ public class Get10 extends GoRestBaseUrl {
         assertEquals(dataKeyMap.get("email"),((Map)actualData.get("data")).get("email"));
         assertEquals(dataKeyMap.get("gender"),((Map)actualData.get("data")).get("gender"));
         assertEquals(dataKeyMap.get("status"),((Map)actualData.get("data")).get("status"));
+        assertEquals(dataKeyMap.get("status"),((Map)actualData.get("data")).get("status"));
 
 
     }
