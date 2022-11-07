@@ -1,7 +1,12 @@
 package kendiCalismam;
 
 import baseUrl.JsonPlaceHolderBaseUrl;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Test;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class C10_ObjectMapper_Map extends JsonPlaceHolderBaseUrl {
     /*
@@ -25,7 +30,12 @@ public class C10_ObjectMapper_Map extends JsonPlaceHolderBaseUrl {
      */
 
     @Test
-    public void C10() {
+    public void C10() throws IOException {
 
+        // Set the Url
+        spec.pathParam("first","todos");
+
+        // Set the Expected Data
+        Map<String,Object> expectedData= new ObjectMapper().readValue("", HashMap.class);
     }
 }
