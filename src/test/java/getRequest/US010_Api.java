@@ -10,7 +10,6 @@ import pojos.PatientPojo;
 import pojos.PhysicianPojo;
 import pojos.UserPojo;
 import utils.ObjectMapperUtils;
-
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static utils.Authentication.generateToken;
@@ -29,7 +28,7 @@ public class US010_Api extends MedunnaBaseUrl {
 
         PhysicianPojo physician = new PhysicianPojo("adminosbt","2022-11-16T10:01:39.404884Z",301043,"Prof.Dr. Oğuz",
                 "TOKLUCU","1990-12-31T22:00:00Z","444-444-4444","MALE","Apositive","",
-                "Professor Doctor",user,"OPHTHALMOLOGY",null,null,200.00,"","image/png");
+                "Professor Doctor",user,"OPHTHALMOLOGY",null,null,200.00,"","image/png");//
 
         AppointmentPojo expectedData= new AppointmentPojo("hastaosbt","2022-11-16T10:19:30.334695Z",302324,
                 "2022-11-21T00:00:00Z","2022-11-21T01:00:00Z","PENDING","Gecmis rahatsizligi bulunmamakta",
